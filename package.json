@@ -1,8 +1,9 @@
 {
-  "name": "iSchedule",
-  "version": "1.0.0",
+  "name": "iWillDecideLater",
+  "version": "0.1.0",
   "main": "index.js",
-  "license": "MIT",
+  "license": "UNLICENSED",
+  "repository": "https://github.com/Lithium366/ssr",
   "scripts": {
     "build": "npm-run-all prod:*",
     "start": "npm run build && node dist/index.js",
