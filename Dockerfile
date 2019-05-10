@@ -1,6 +1,4 @@
 FROM arm32v7/node:10.15.3-jessie-slim
-COPY qemu-arm-static /usr/bin
-
 WORKDIR /usr/src/app
 
 COPY . .
