@@ -5,13 +5,15 @@ node {
         checkout scm
     }
 
-    stage('Build image') {
-        app = docker.build("lithium366/ssr")
+    stage('Install') {
+        sh "npm install"
     }
 
-    stage('Linting') {
-        app.inside {
-          sh "npm run lint"
-        }
+    stage('Lint') {
+        sh "npm run lint"
+    }
+
+    stage('Build image') {
+        app = docker.build("lithium366/ssr")
     }
 }
