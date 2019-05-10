@@ -16,4 +16,10 @@ node {
     stage('Build image') {
         app = docker.build("lithium366/ssr")
     }
+
+    stage('Push image') {
+        docker.withRegistry('https://registry.hub.docker.com', 'docker-hub-credentials') {
+            app.push("latest")
+        }
+    }
 }
