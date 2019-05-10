@@ -10,7 +10,10 @@ node {
     }
 
     stage('Linting') {
-        docker.image('lithium366/ssr:latest').inside {
+        agent {
+            docker { image 'lithium366/ssr:latest' }
+        }
+        steps {
           sh "npm run lint"
         }
     }
